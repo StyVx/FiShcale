@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fih Scale 🐟</title>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Bubbles background -->
+<div class="bubbles" id="bubbles"></div>
+
+<!-- ADS -->
+<div class="ad tr" onclick="showToast('🍹 Not an actual ad, go drink some water!')">
+  <div class="ad-l">🔴 SPONSORED</div>
+  <span class="ad-e">🍹</span>
+  <div class="ad-t">FISH GULP™</div>
+  <div class="ad-s">Energy drink for certified party fish</div>
+</div>
+<div class="ad br" onclick="showToast('🐠 Not an actual ad either. Pace yourself.')">
+  <div class="ad-l">🔴 SPONSORED</div>
+  <span class="ad-e">🪩</span>
+  <div class="ad-t">AQUA RAVE</div>
+  <div class="ad-s">Every Friday — No sardines allowed</div>
+</div>
+
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><button class="logo-btn" onclick="showPage('home')" id="tab-home">🐟 Fih <span>Scale</span></button></div>
+  
+  <div class="nav-tabs">
+    <button class="ntab on" onclick="showPage('home')" id="tab-home">🏠 Home</button>
+    <button class="ntab" onclick="showPage('picker')" id="tab-picker" disabled>🎣 Pick</button>
+    <button class="ntab" onclick="showPage('board')" id="tab-board" disabled>📊 Board</button>
+    <button class="ntab" onclick="showPage('addfish')" id="tab-addfish">+ Fish</button>
+  </div>
+  <div class="nuser" id="nuser" style="display:none">
+    <span id="nfishemoji">🐟</span>
+    <span id="nusername">—</span>
+  </div>
+</nav>
+
+<main>
+<!-- ── HOME ── -->
+<div class="page on" id="page-home">
+  <div class="hero">
+    <div class="parade">🐟 🐠 🦈 🐡 🫠</div>
+    <h1>FIH SCALE</h1>
+    <p class="sub">Track your party state through the sacred language of fish</p>
+  </div>
+  <div class="hgrid">
+    <div class="card">
+      <div class="ctitle">🎉 Create Party</div>
+      <div class="field"><label>Party Name</label><input type="text" id="cname" placeholder="Friday Night Swim..."></div>
+      <div class="field"><label>Password (optional — leave blank for auto-code)</label><input type="text" id="cpwd" placeholder="myparty2024"></div>
+      <div class="field"><label>Your Name</label><input type="text" id="cuname" placeholder="Captain Ahab..."></div>
+      <button class="btn bp bfw" onclick="createParty()">🚀 Launch Party</button>
+    </div>
+    <div class="card">
+      <div class="ctitle">🔑 Join Party</div>
+      <div class="field"><label>Party Code / Password</label><input type="text" id="jcode" placeholder="Enter code..." oninput="this.value=this.value.toUpperCase()"></div>
+      <div class="field"><label>Your Name</label><input type="text" id="juname" placeholder="Your name..."></div>
+      <button class="btn bs bfw" onclick="joinParty()">🐟 Dive In</button>
+    </div>
+  </div>
+  <div id="activepanel" style="display:none;margin-top:18px">
+    <div class="card"><div class="ctitle">🌊 Your Party</div><div id="activeinfo"></div></div>
+  </div>
+  <div id="archivepanel" style="display:none;margin-top:18px">
+    <div class="card"><div class="ctitle">📁 Archived Parties</div><div id="archivelist"></div></div>
+  </div>
+</div>
+
+<!-- ── PICKER ── -->
+<div class="page" id="page-picker">
+  <div id="picknop" class="nop" style="display:none"><div class="ne">🐠</div><p>Join or create a party first!</p><button class="btn bp" style="margin-top:12px" onclick="showPage('home')">Go Home</button></div>
+  <div id="pickcont">
+    <div class="sbar" id="pickstatus"></div>
+    <div class="card">
+      <div class="ctitle">🐟 How are you feeling right now?</div>
+      <p style="font-size:12px;color:var(--tx2);margin-bottom:14px">Pick the fish that best describes your current state. Hover names for descriptions.</p>
+      <div class="fgrid" id="fishgrid"></div>
+    </div>
+    <div style="margin-top:11px;text-align:right">
+      <button class="btn bg" onclick="confirmPick()" id="confirmbtn" disabled>Confirm Pick</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── BOARD ── -->
+<div class="page" id="page-board">
+  <div id="boardnop" class="nop" style="display:none"><div class="ne">📊</div><p>Join or create a party first!</p><button class="btn bp" style="margin-top:12px" onclick="showPage('home')">Go Home</button></div>
+  <div id="boardcont">
+    <div class="sbar" id="boardstatus"></div>
+    <div class="btabs">
+      <button class="btab on" onclick="switchBTab('group')" id="btab-group">🌊 The Whole School</button>
+      <button class="btab" onclick="switchBTab('personal')" id="btab-personal">🐟 My Journey</button>
+    </div>
+    <div id="bgroup">
+      <div class="card">
+        <div class="ctitle">Current States</div>
+        <div class="gcont"><canvas id="gcanvas" width="600" height="500"></canvas></div>
+        <div class="legend" id="glegend"></div>
+      </div>
+      <div style="margin-top:11px;display:flex;gap:7px;flex-wrap:wrap">
+        <button class="btn bs bsm" onclick="refreshBoard()">🔄 Refresh</button>
+        <button class="btn bwarn bsm" onclick="saveAndReset()">💾 Save & Reset</button>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="ctitle">🎭 Who's Swimming</div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px" id="userslist"></div>
+      </div>
+    </div>
+    <div id="bpersonal" style="display:none">
+      <div class="card">
+        <div class="ctitle">My Fish Journey</div>
+        <div class="gcont"><canvas id="pcanvas" width="600" height="500"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ADD FISH ── -->
+<div class="page" id="page-addfish">
+  <div class="card">
+    <div class="ctitle">🐟 Add Custom Fish</div>
+    <div class="twocol">
+      <div class="field"><label>Fish Name *</label><input type="text" id="afname" placeholder="Blobfish, Narwhal..." oninput="updatePreview()"></div>
+      <div class="field"><label>Emoji (optional)</label><input type="text" id="afemoji" placeholder="🐟" maxlength="4" oninput="updatePreview()"></div>
+    </div>
+    <div class="field"><label>Description (optional)</label><textarea id="afdesc" rows="2" placeholder="What does this fish state feel like?" oninput="updatePreview()"></textarea></div>
+
+    <div class="ctitle" style="font-size:15px;margin-top:4px">📊 Where on the Scale?</div>
+    <div class="ax2">
+      <div class="field">
+        <label>Lucidity ↔ Cloudiness</label>
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = 💨 Totally Cloudy → +5 = 💡 Hyper Lucidity</div>
+        <div class="rangef">
+          <span style="font-size:12px">☁️</span>
+          <input type="range" id="afluc" min="-5" max="5" step="1" value="0" oninput="document.getElementById('afluv').textContent=this.value;updatePreview()">
+          <span style="font-size:12px">💡</span>
+          <span class="rval" id="afluv">0</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Euphoria ↔ Feeling Blue</label>
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = 😢 Deep Blue → +5 = 🎉 Pure Euphoria</div>
+        <div class="rangef">
+          <span style="font-size:12px">😢</span>
+          <input type="range" id="afeur" min="-5" max="5" step="1" value="0" oninput="document.getElementById('afeuv').textContent=this.value;updatePreview()">
+          <span style="font-size:12px">🎉</span>
+          <span class="rval" id="afeuv">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:6px">
+      <label>Fish Image</label>
+      <div class="imgtabs">
+        <button class="itab on" onclick="switchITab('upload',this)">📁 Upload</button>
+        <button class="itab" onclick="switchITab('url',this)">🔗 URL</button>
+        <button class="itab" onclick="switchITab('draw',this)">✏️ Draw</button>
+      </div>
+      <div class="ipanel on" id="ip-upload">
+        <div class="uarea" onclick="document.getElementById('afile').click()">
+          <div class="uicon">📁</div>
+          <div id="uploadlabel">Click to upload · PNG, JPG, GIF, WebP</div>
+        </div>
+        <input type="file" id="afile" accept="image/*" style="display:none" onchange="handleUpload(event)">
+      </div>
+      <div class="ipanel" id="ip-url">
+        <input type="url" id="afurl" placeholder="https://example.com/fish.png" oninput="updatePreview()">
+      </div>
+      <div class="ipanel" id="ip-draw">
+        <canvas id="drawCanvas" width="480" height="220"></canvas>
+        <div class="drawtools">
+          <input type="color" id="dcolor" value="#00d4ff" title="Color" style="width:32px;height:28px;border:none;background:none;cursor:pointer">
+          <input type="range" id="dsize" min="2" max="32" value="8" title="Brush" style="width:70px;accent-color:var(--a)">
+          <button class="btn bs bsm" onclick="toggleEraser(this)">🧹 Eraser</button>
+          <button class="btn bs bsm" onclick="undoDraw()">↩ Undo</button>
+          <button class="btn bd bsm" onclick="clearDraw()">🗑 Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prev-row">
+      <div class="fishprev" id="fprev"><span id="fprevemoji">🐟</span></div>
+      <div>
+        <div style="font-family:var(--fd);font-size:15px" id="fprevname">Your Fish</div>
+        <div style="font-size:11px;color:var(--tx2);margin-top:3px" id="fprevdesc">Add a description...</div>
+      </div>
+    </div>
+    <hr class="divider">
+    <button class="btn bg bfw" onclick="addFish()">🐟 Add to the Scale</button>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="ctitle">🗂 Full Fish Library</div>
+    <div class="fgrid" id="libgrid"></div>
+  </div>
+</div>
+</main>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
