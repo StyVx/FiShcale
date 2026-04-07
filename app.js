@@ -1,20 +1,29 @@
-
 /* ─────────────────────────────────────────────
    DEFAULT FISH
 ───────────────────────────────────────────── */
 const DEFAULTS = [
-  {id:'lampris',    name:'Lampris',       image:'https://www.cpm-diffusion.com/wp-content/uploads/2023/06/Sachet-Poisson-pane_Batonnets_493x210mm_Melis.jpg', col:'#7B4FCF', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'pike',       name:'Pike',          image:'https://www.the-fishfinders.com/wp-content/uploads/2021/05/northern-pike.png', col:'#2E86AB', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'clownfish',  name:'Clownfish',     emoji:'', col:'#FF6B35', luc:-1, eur:5,  desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
-  {id:'pufferfish', name:'Pufferfish',    emoji:'', col:'#F7A27A', luc:-3, eur:3,  desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
-  {id:'goldfish',   name:'Goldfish',      emoji:'', col:'#FFD700', luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'anglerfish', name:'Anglerfish',    emoji:'', col:'#3A1060', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'jellyfish',  name:'Jellyfish',     emoji:'', col:'#87CEEB', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'swordfish',  name:'Swordfish',     emoji:'', col:'#4CAF50', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'sardine',    name:'Sardine',       emoji:'', col:'#607D8B', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'flyingfish', name:'Flying Fish',   emoji:'', col:'#E91E63', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'carp',       name:'Carp',          emoji:'', col:'#8D6E63', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'electriceel',name:'Electric Eel',  emoji:'', col:'#FFEB3B', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F1', name:'', image:'img/F1.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F2', name:'', image:'img/F2.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F3', name:'', image:'img/F3.JPG', luc:-1, eur:5,  desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
+  {id:'F4', name:'', image:'img/F4.JPG', luc:-3, eur:3,  desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
+  {id:'F5', name:'', image:'img/F5.JPG',luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F6', name:'', image:'img/F6.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F7', name:'', image:'img/F7.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F8', name:'', image:'img/F8.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F9', name:'', image:'img/F9.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F10', name:'', image:'img/F10.JPG', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F11', name:'', image:'img/F11.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F12', name:'', image:'img/F12.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F13', name:'', image:'img/F13.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F14', name:'', image:'img/F14.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F15', name:'', image:'img/F15.JPG', luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F16', name:'', image:'img/F16.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F17', name:'', image:'img/F17.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F18', name:'', image:'img/F18.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F19', name:'', image:'img/F19.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F20', name:'', image:'img/F20.JPG',luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F21', name:'', image:'img/F21.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F22', name:'', image:'img/F22.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
 ];
 
 /* ─────────────────────────────────────────────
@@ -165,27 +174,18 @@ function renderPicker(){
     `🌊 <b>${party.name}</b> &nbsp;·&nbsp; You are: ${lf?lf.emoji+' <b>'+lf.name+'</b>':'❓ not picked yet'}&nbsp;&nbsp;<span style="font-size:11px;color:var(--tx3)">Code: <b style="color:var(--a)">${S.curParty}</b></span>`;
   const grid=document.getElementById('fishgrid');
   grid.innerHTML=allFish().map(f=>fishCardHTML(f,lf&&lf.id===f.id)).join('');
+  injectAds(grid);
   S.pendFish=null;
   document.getElementById('confirmbtn').disabled=true;
 }
 function fishCardHTML(f,sel){
-  const lp=f.luc>0?f.luc/5*50:0,cp=f.luc<0?-f.luc/5*50:0;
-  const ep=f.eur>0?f.eur/5*50:0,bp=f.eur<0?-f.eur/5*50:0;
   const imgEl=f.image
-    ?`<img class="fimg" src="${f.image}" onerror="this.style.display='none'">`
-    :`<span class="femoji">${f.emoji}</span>`;
+    ?`<div class="fcard-img-wrap"><img class="fimg" src="${f.image}" onerror="this.parentElement.innerHTML='<span class=femoji>${f.emoji}</span>'"></div>`
+    :`<div class="fcard-img-wrap"><span class="femoji">${f.emoji}</span></div>`;
   return`<div class="fcard${sel?' sel':''}" onclick="selFish('${f.id}')" data-id="${f.id}">
     <div class="tip">${f.desc||'No description.'}</div>
     ${imgEl}
     <div class="fname">${f.name}</div>
-    <div class="fbars">
-      <div class="brow"><span class="blabel" title="Lucidity/Cloudiness">☁💡</span>
-        <div class="btrack"><div class="bfill bl" style="width:${lp}%"></div><div class="bfill bc" style="width:${cp}%"></div></div>
-      </div>
-      <div class="brow"><span class="blabel" title="Euphoria/Feeling Blue">😢🎉</span>
-        <div class="btrack"><div class="bfill be" style="width:${ep}%"></div><div class="bfill bb" style="width:${bp}%"></div></div>
-      </div>
-    </div>
   </div>`;
 }
 function selFish(id){
@@ -463,23 +463,18 @@ function addFish(){
 function renderLib(){
   const grid=document.getElementById('libgrid');
   grid.innerHTML=allFish().map(f=>{
-    const lp=f.luc>0?f.luc/5*50:0,cp=f.luc<0?-f.luc/5*50:0;
-    const ep=f.eur>0?f.eur/5*50:0,bp=f.eur<0?-f.eur/5*50:0;
-    const imgEl=f.image?`<img class="fimg" src="${f.image}" onerror="this.style.display='none'">`:`<span class="femoji">${f.emoji}</span>`;
-    const delBtn=f.isCustom?`<button class="btn bd bsm" style="margin-top:8px;font-size:10px;padding:3px 8px" onclick="delFish('${f.id}')">🗑 Remove</button>`:'';
+    const imgEl=f.image
+      ?`<div class="fcard-img-wrap"><img class="fimg" src="${f.image}" onerror="this.parentElement.innerHTML='<span class=femoji>${f.emoji}</span>'"></div>`
+      :`<div class="fcard-img-wrap"><span class="femoji">${f.emoji}</span></div>`;
+    const delBtn=f.isCustom?`<button class="btn bd bsm" style="margin:6px auto;font-size:10px;padding:3px 8px;display:flex" onclick="delFish('${f.id}')">🗑 Remove</button>`:'';
     return`<div class="fcard" style="cursor:default">
       <div class="tip">${f.desc||'No description.'}</div>
-      ${imgEl}<div class="fname">${f.name}</div>
-      <div class="fbars">
-        <div class="brow"><span class="blabel">☁💡</span>
-          <div class="btrack"><div class="bfill bl" style="width:${lp}%"></div><div class="bfill bc" style="width:${cp}%"></div></div>
-        </div>
-        <div class="brow"><span class="blabel">😢🎉</span>
-          <div class="btrack"><div class="bfill be" style="width:${ep}%"></div><div class="bfill bb" style="width:${bp}%"></div></div>
-        </div>
-      </div>${delBtn}
+      ${imgEl}
+      <div class="fname">${f.name}</div>
+      ${delBtn}
     </div>`;
   }).join('');
+  injectAds(grid);
 }
 function delFish(id){
   if(!confirm('Remove this fish from the scale?'))return;
@@ -542,9 +537,134 @@ function clearDraw(){
   ctx.fillStyle='#060e1c';ctx.fillRect(0,0,c.width,c.height);
 }
 
+
 /* ─────────────────────────────────────────────
-   TOAST
+   ADS — Display banners organiques
 ───────────────────────────────────────────── */
+const ADS = [
+  {
+    brand:'FISH GULP™',
+    tagline:'Energy drink for certified party fish 🐟',
+    emoji:'🍹',
+    cta:'Get a can',
+    gradient:'linear-gradient(100deg,rgba(0,30,60,0.95) 0%,rgba(0,80,120,0.85) 100%)',
+    accent:'#00d4ff',
+    ctaBg:'#00d4ff',
+    ctaColor:'#000',
+    msg:'🍹 Not an actual ad, go drink some water!'
+  },
+  {
+    brand:'AQUA RAVE',
+    tagline:'Every Friday night — No sardines allowed 🪩',
+    emoji:'🌐',
+    cta:'Get tickets',
+    gradient:'linear-gradient(100deg,rgba(30,0,60,0.95) 0%,rgba(80,0,120,0.85) 100%)',
+    accent:'#b44fff',
+    ctaBg:'#b44fff',
+    ctaColor:'#fff',
+    msg:'🐠 Not an actual ad either. Pace yourself.'
+  },
+  {
+    brand:'DEEP SEA VPN',
+    tagline:'Browse the dark web of the ocean, anonymously',
+    emoji:'🦑',
+    cta:'Try free',
+    gradient:'linear-gradient(100deg,rgba(0,20,20,0.95) 0%,rgba(0,60,50,0.85) 100%)',
+    accent:'#00ff9d',
+    ctaBg:'#00ff9d',
+    ctaColor:'#000',
+    msg:'🦑 Not a real VPN. Your data is already wet.'
+  },
+  {
+    brand:'KELP & CO.',
+    tagline:'Premium seaweed snacks for the discerning fish',
+    emoji:'🌿',
+    cta:'Shop now',
+    gradient:'linear-gradient(100deg,rgba(10,25,0,0.95) 0%,rgba(30,70,10,0.85) 100%)',
+    accent:'#a8ff3e',
+    ctaBg:'#a8ff3e',
+    ctaColor:'#000',
+    msg:'🌿 Not edible. Please eat actual food tonight.'
+  }
+];
+
+function makeAdEl(adIdx){
+  const a=ADS[adIdx%ADS.length];
+  const el=document.createElement('div');
+  el.className='ad-banner';
+  el.innerHTML=`
+    <div class="ad-label">SPONSORED</div>
+    <div class="ad-inner" style="background:${a.gradient};border:1px solid ${a.accent}33;border-radius:10px">
+      <div class="ad-icon">${a.emoji}</div>
+      <div class="ad-copy">
+        <div class="ad-brand" style="color:${a.accent}">${a.brand}</div>
+        <div class="ad-tagline">${a.tagline}</div>
+      </div>
+      <button class="ad-cta" style="background:${a.ctaBg};color:${a.ctaColor}">${a.cta}</button>
+    </div>`;
+  el.addEventListener('click',()=>toast(a.msg));
+  return el;
+}
+
+/* Pubs fixes sur les côtés si assez de place, sinon inline dans la grille */
+let _adsFixed=[];
+function renderSideAds(){
+  _adsFixed.forEach(el=>el.remove());
+  _adsFixed=[];
+  const W=window.innerWidth;
+  const mainW=860; // max-width du main
+  const sideSpace=(W-mainW)/2;
+  if(sideSpace>=220){
+    // Assez de place des deux côtés
+    const positions=[
+      {top:'80px',left:'10px'},
+      {top:'80px',right:'10px'},
+      {bottom:'30px',left:'10px'},
+      {bottom:'30px',right:'10px'}
+    ];
+    ADS.forEach((a,i)=>{
+      const el=makeAdEl(i);
+      el.classList.add('ad-fixed');
+      Object.assign(el.style,positions[i]||{top:'80px',right:'10px'});
+      document.body.appendChild(el);
+      _adsFixed.push(el);
+    });
+  } else {
+    // Pas de place : on injecte dans les grilles visibles
+    injectInlineAds();
+  }
+}
+
+function injectInlineAds(){
+  ['fishgrid','libgrid'].forEach((gid,gi)=>{
+    const grid=document.getElementById(gid);
+    if(!grid)return;
+    // Retirer les anciennes pubs inline
+    grid.querySelectorAll('.ad-inline-wrap').forEach(el=>el.remove());
+    const cards=[...grid.children];
+    if(cards.length<4)return;
+    const insertAfter=8;
+    let adN=gi*2;
+    for(let i=insertAfter;i<cards.length;i+=insertAfter+1){
+      const outer=document.createElement('div');
+      outer.className='ad-inline-wrap';
+      outer.style.cssText='grid-column:1/-1;margin:4px 0';
+      outer.appendChild(makeAdEl(adN++));
+      const ref=cards[i];
+      if(ref)grid.insertBefore(outer,ref);
+    }
+  });
+}
+
+function injectAds(gridEl){
+  // Nettoyage des pubs inline dans cette grille
+  gridEl.querySelectorAll('.ad-inline-wrap').forEach(el=>el.remove());
+  // Laisser renderSideAds décider du mode
+  renderSideAds();
+}
+
+
+
 let toastT;
 function toast(msg){
   const t=document.getElementById('toast');
@@ -581,11 +701,11 @@ if(!CanvasRenderingContext2D.prototype.roundRect){
 
 function init(){
   load();
-  // Check URL for party param
   const p=new URLSearchParams(location.search).get('party');
   if(p)document.getElementById('jcode').value=p.toUpperCase();
   updateNav();renderHome();initDraw();renderLib();initBubbles();
-  // Auto-refresh board every 30s
+  renderSideAds();
+  window.addEventListener('resize',()=>renderSideAds());
   setInterval(()=>{if(document.getElementById('page-board').classList.contains('on'))renderBoard();},30000);
 }
 init();
