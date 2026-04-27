@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fih Scale 🐟</title>
+<title>Fish Scale</title>
+<link rel="icon" type="image/x-icon" href="img/icon.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -56,11 +57,22 @@
     </div>
   </div>
   <div id="activepanel" style="display:none;margin-top:18px">
-    <div class="card"><div class="ctitle">🌊 Your Party</div><div id="activeinfo"></div></div>
+    <div class="card"><div class="ctitle">Your Party</div><div id="activeinfo"></div></div>
   </div>
   <div id="archivepanel" style="display:none;margin-top:18px">
     <div class="card"><div class="ctitle">📁 Archived Parties</div><div id="archivelist"></div></div>
   </div>
+  <div class="scaleoverview">
+    <div class="card" style="margin-top:14px">
+    <div class="ctitle">Scale Overview</div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px" id="userslist"></div>
+  </div>
+    <img src="img/Fish scale v3.jpg" alt="Scale Overview">
+  </div>
+  <div class="card" style="margin-top:14px">
+        <div class="ctitle">Results</div>
+        <div class="gcont"><canvas id="hcanvas" width="600" height="500"></canvas></div>
+      </div>
 </div>
 
 <!-- ── PICKER ── -->
@@ -69,7 +81,7 @@
   <div id="pickcont">
     <div class="sbar" id="pickstatus"></div>
     <div class="card">
-      <div class="ctitle">🐟 How are you feeling right now?</div>
+      <div class="ctitle">How are you feeling right now?</div>
       <p style="font-size:12px;color:var(--tx2);margin-bottom:14px">Pick the fish that best describes your current state. Hover names for descriptions.</p>
       <div class="fgrid" id="fishgrid"></div>
     </div>
@@ -85,8 +97,8 @@
   <div id="boardcont">
     <div class="sbar" id="boardstatus"></div>
     <div class="btabs">
-      <button class="btab on" onclick="switchBTab('group')" id="btab-group">🌊 The Whole School</button>
-      <button class="btab" onclick="switchBTab('personal')" id="btab-personal">🐟 My Journey</button>
+      <button class="btab on" onclick="switchBTab('group')" id="btab-group">The Whole School</button>
+      <button class="btab" onclick="switchBTab('personal')" id="btab-personal">My Journey</button>
     </div>
     <div id="bgroup">
       <div class="card">
@@ -99,14 +111,14 @@
         <button class="btn bwarn bsm" onclick="saveAndReset()">💾 Save & Reset</button>
       </div>
       <div class="card" style="margin-top:14px">
-        <div class="ctitle">🎭 Who's Swimming</div>
+        <div class="ctitle">Who's Swimming</div>
         <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px" id="userslist"></div>
       </div>
     </div>
     <div id="bpersonal" style="display:none">
       <div class="card">
         <div class="ctitle">My Fish Journey</div>
-        <div class="gcont"><canvas id="pcanvas" width="1000" height="700"></canvas></div>
+        <div class="gcont"><canvas id="pcanvas" width="600" height="500"></canvas></div>
       </div>
     </div>
   </div>
@@ -115,10 +127,10 @@
 <!-- ── ADD FISH ── -->
 <div class="page" id="page-addfish">
   <div class="card">
-    <div class="ctitle">🐟 Add Custom Fish</div>
+    <div class="ctitle">Add Custom Fish</div>
     <div class="twocol">
       <div class="field"><label>Fish Name *</label><input type="text" id="afname" placeholder="Blobfish, Narwhal..." oninput="updatePreview()"></div>
-      <div class="field"><label>Emoji (optional)</label><input type="text" id="afemoji" placeholder="🐟" maxlength="4" oninput="updatePreview()"></div>
+      <!-- <div class="field"><label>Emoji (optional)</label><input type="text" id="afemoji" placeholder="🐟" maxlength="4" oninput="updatePreview()"></div> -->
     </div>
     <div class="field"><label>Description (optional)</label><textarea id="afdesc" rows="2" placeholder="What does this fish state feel like?" oninput="updatePreview()"></textarea></div>
 
@@ -126,7 +138,7 @@
     <div class="ax2">
       <div class="field">
         <label>Lucidity ↔ Cloudiness</label>
-        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = 💨 Totally Cloudy → +5 = 💡 Hyper Lucidity</div>
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = ☁️ Totally Cloudy → +5 = 💡 Hyper Lucidity</div>
         <div class="rangef">
           <span style="font-size:12px">☁️</span>
           <input type="range" id="afluc" min="-5" max="5" step="1" value="0" oninput="document.getElementById('afluv').textContent=this.value;updatePreview()">
@@ -183,11 +195,11 @@
       </div>
     </div>
     <hr class="divider">
-    <button class="btn bg bfw" onclick="addFish()">🐟 Add to the Scale</button>
+    <button class="btn bg bfw" onclick="addFish()">Add to the Scale</button>
   </div>
 
   <div class="card" style="margin-top:16px">
-    <div class="ctitle">🗂 Full Fish Library</div>
+    <div class="ctitle">Full Fish Library</div>
     <div class="fgrid" id="libgrid"></div>
   </div>
 </div>
