@@ -90,6 +90,7 @@ select option{background:#0a1628}
 .chip{display:inline-flex;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:3px 10px 3px 7px;font-size:12px}
 .chip.me{border-color:var(--a2);color:var(--a2)}
 .archive-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 13px;display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:7px}
+.scaleoverview img{width:100%;border-radius:var(--r);border:1px solid var(--border);margin-top:14px}
 
 /* FISH GRID */
 .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:14px}
