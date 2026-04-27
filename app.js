@@ -2,28 +2,28 @@
    DEFAULT FISH
 ───────────────────────────────────────────── */
 const DEFAULTS = [
-  {id:'F1',    name:'',       image:'img/F1.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F2',       name:'',          image:'img/F2.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F3',  name:'',     image:'img/F3.JPG', luc:-1, eur:5,  desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
-  {id:'F4', name:'',    image:'img/F4.JPG', luc:-3, eur:3,  desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
-  {id:'F5',   name:'',      image:'img/F5.JPG',luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F6', name:'',    image:'img/F6.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F7',  name:'',     image:'img/F7.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F8',  name:'',     image:'img/F8.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F9',    name:'',       image:'img/F9.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F10', name:'',   image:'img/F10.JPG', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F11',       name:'',          image:'img/F11.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F12',name:'',  image:'img/F12.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
-  {id:'F13',    name:'',       image:'img/F13.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F14',       name:'',          image:'img/F14.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F15',   name:'',      image:'img/F15.JPG', luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F16', name:'',    image:'img/F16.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F17',  name:'',     image:'img/F17.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F18',  name:'',     image:'img/F18.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F19',    name:'',       image:'img/F19.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F20', name:'',   image:'img/F20.JPG',luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F21',       name:'',          image:'img/F21.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F22',name:'',  image:'img/F22.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F1', name:'', image:'img/F1.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F2', name:'', image:'img/F2.JPG', luc:3, eur:2, desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F3', name:'', image:'img/F3.JPG', luc:-1, eur:5, desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
+  {id:'F4', name:'', image:'img/F4.JPG', luc:-3, eur:3, desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
+  {id:'F5', name:'', image:'img/F5.JPG',luc:5, eur:4, desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F6', name:'', image:'img/F6.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F7', name:'', image:'img/F7.JPG', luc:-4, eur:0, desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F8', name:'', image:'img/F8.JPG', luc:4, eur:1, desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F9', name:'', image:'img/F9.JPG', luc:2, eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F10', name:'', image:'img/F10.JPG', luc:1, eur:5, desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F11', name:'', image:'img/F11.JPG', luc:4, eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F12', name:'', image:'img/F12.JPG', luc:2, eur:3, desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F13', name:'', image:'img/F13.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F14', name:'', image:'img/F14.JPG', luc:3, eur:2, desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F15', name:'', image:'img/F15.JPG', luc:5, eur:4, desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F16', name:'', image:'img/F16.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F17', name:'', image:'img/F17.JPG', luc:-4, eur:0, desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F18', name:'', image:'img/F18.JPG', luc:4, eur:1, desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F19', name:'', image:'img/F19.JPG', luc:2, eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F20', name:'', image:'img/F20.JPG',luc:1, eur:5, desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F21', name:'', image:'img/F21.JPG', luc:4, eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F22', name:'', image:'img/F22.JPG', luc:2, eur:3, desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
 ];
 
 /* ─────────────────────────────────────────────
@@ -125,6 +125,7 @@ function renderHome(){
   const party=S.curParty?S.parties[S.curParty]:null;
   const ap=document.getElementById('activepanel');
   if(party){
+    renderBoard();
     ap.style.display='';
     const link=location.href.split('?')[0]+'?party='+S.curParty;
     document.getElementById('activeinfo').innerHTML=`
@@ -200,8 +201,8 @@ function confirmPick(){
   save();updateNav();renderPicker();showPage('board');
   const f=allFish().find(x=>x.id===S.pendFish);
   toast(`${f.emoji} You are now a ${f.name}!`);
-
 }
+
 function latestFish(u,p){
   const uname=u||S.curUser,pid=p||S.curParty;
   if(!uname||!pid)return null;
@@ -229,7 +230,8 @@ function renderBoard(){
   if(!party)return;
   document.getElementById('boardstatus').innerHTML=
     `🌊 <b>${party.name}</b> &nbsp;·&nbsp; Code: <b style="color:var(--a)">${S.curParty}</b> &nbsp;·&nbsp; ${Object.keys(party.users).length} swimmer(s)`;
-  drawGroupGraph(party);
+  drawGroupGraph(party,'gcanvas');
+  drawGroupGraph(party,'hcanvas');
   drawPersonalGraph(party);
   const ul=document.getElementById('userslist');
   ul.innerHTML=Object.keys(party.users).map(u=>{
@@ -322,8 +324,8 @@ function drawDot(ctx,fish,x,y,label,col,num,imgCache){
   }
   ctx.restore();
 }
-function drawGroupGraph(party){
-  const canvas=document.getElementById('gcanvas');
+function drawGroupGraph(party,canvasId){
+  const canvas=document.getElementById(canvasId);
   const ctx=canvas.getContext('2d');
   const W=canvas.width,H=canvas.height;
   const{pad,cX,cY,gW,gH}=graphBase(ctx,W,H);
