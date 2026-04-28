@@ -206,5 +206,15 @@
 </main>
 <div class="toast" id="toast"></div>
 <script src="app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    databaseURL: "https://fish-scale-1813f-default-rtdb.europe-west1.firebasedatabase.app/"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
 </body>
 </html>
