@@ -2,35 +2,36 @@
    DEFAULT FISH
 ───────────────────────────────────────────── */
 const DEFAULTS = [
-  {id:'F1', name:'', image:'img/F1.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F2', name:'', image:'img/F2.JPG', luc:3, eur:2, desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F3', name:'', image:'img/F3.JPG', luc:-1, eur:5, desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
-  {id:'F4', name:'', image:'img/F4.JPG', luc:-3, eur:3, desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
-  {id:'F5', name:'', image:'img/F5.JPG',luc:5, eur:4, desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F6', name:'', image:'img/F6.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F7', name:'', image:'img/F7.JPG', luc:-4, eur:0, desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F8', name:'', image:'img/F8.JPG', luc:4, eur:1, desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F9', name:'', image:'img/F9.JPG', luc:2, eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F10', name:'', image:'img/F10.JPG', luc:1, eur:5, desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F11', name:'', image:'img/F11.JPG', luc:4, eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F12', name:'', image:'img/F12.JPG', luc:2, eur:3, desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
-  {id:'F13', name:'', image:'img/F13.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F14', name:'', image:'img/F14.JPG', luc:3, eur:2, desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F15', name:'', image:'img/F15.JPG', luc:5, eur:4, desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F16', name:'', image:'img/F16.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F17', name:'', image:'img/F17.JPG', luc:-4, eur:0, desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F18', name:'', image:'img/F18.JPG', luc:4, eur:1, desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F19', name:'', image:'img/F19.JPG', luc:2, eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F20', name:'', image:'img/F20.JPG',luc:1, eur:5, desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F21', name:'', image:'img/F21.JPG', luc:4, eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F22', name:'', image:'img/F22.JPG', luc:2, eur:3, desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F1',    name:'John',       image:'img/F1.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F2',       name:'',          image:'img/F2.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F3',  name:'',     image:'img/F3.JPG', luc:-1, eur:5,  desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
+  {id:'F4', name:'',    image:'img/F4.JPG', luc:-3, eur:3,  desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
+  {id:'F5',   name:'',      image:'img/F5.JPG',luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F6', name:'',    image:'img/F6.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F7',  name:'',     image:'img/F7.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F8',  name:'',     image:'img/F8.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F9',    name:'',       image:'img/F9.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F10', name:'',   image:'img/F10.JPG', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F11',       name:'',          image:'img/F11.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F12',name:'',  image:'img/F12.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F13',    name:'',       image:'img/F13.JPG', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
+  {id:'F14',       name:'',          image:'img/F14.JPG', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
+  {id:'F15',   name:'',      image:'img/F15.JPG', luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
+  {id:'F16', name:'',    image:'img/F16.JPG', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
+  {id:'F17',  name:'',     image:'img/F17.JPG', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
+  {id:'F18',  name:'',     image:'img/F18.JPG', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
+  {id:'F19',    name:'',       image:'img/F19.JPG', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
+  {id:'F20', name:'',   image:'img/F20.JPG',luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
+  {id:'F21',       name:'',          image:'img/F21.JPG', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
+  {id:'F22',name:'',  image:'img/F22.JPG', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
 ];
 
 /* ─────────────────────────────────────────────
    STATE
 ───────────────────────────────────────────── */
 let S = {parties:{},custom:[],curParty:null,curUser:null,saved:[],pendFish:null,imgMode:'upload',uploadImg:null};
-
+let drawing = false;
+let renderTimeout = null;
 function save(){try{localStorage.setItem('fihscale3',JSON.stringify(S))}catch(e){}}
 function load(){try{const r=localStorage.getItem('fihscale3');if(r)S={...S,...JSON.parse(r)}}catch(e){}}
 function allFish(){return[...DEFAULTS,...(S.custom||[])]}
@@ -48,6 +49,7 @@ function showPage(p){
   if(p==='addfish')renderLib();
   if(p==='home')renderHome();
 }
+
 function updateNav(){
   const party=S.curParty?S.parties[S.curParty]:null;
   const has=!!party;
@@ -69,36 +71,108 @@ function genCode(){
   const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   let s='';for(let i=0;i<4;i++)s+=c[Math.floor(Math.random()*c.length)];return s;
 }
-function createParty(){
-  const name=document.getElementById('cname').value.trim()||'Mystery Party';
-  const pwd=document.getElementById('cpwd').value.trim();
-  const uname=document.getElementById('cuname').value.trim();
-  if(!uname){toast('⚠️ Enter your name!');return;}
-  const code=(pwd||genCode()).toUpperCase();
-  if(S.parties[code]){toast('⚠️ That code exists already. Pick another.');return;}
-  S.parties[code]={name,code,created:Date.now(),users:{[uname]:{history:[]}}};
-  S.curParty=code;S.curUser=uname;
-  save();updateNav();renderHome();
-  toast('🎉 Party created! Code: '+code);
+
+async function createParty() {
+  const name = document.getElementById('cname').value.trim() || 'Mystery Party';
+  const pwd = document.getElementById('cpwd').value.trim();
+  const uname = document.getElementById('cuname').value.trim();
+
+  if (!uname) { toast('⚠️ Enter your name!'); return; }
+
+  const code = (pwd || genCode()).toUpperCase();
+  const partyRef = db.ref('parties/' + code);
+
+  const snap = await partyRef.once('value');
+  if (snap.exists()) {
+    toast('⚠️ That code exists already. Pick another.');
+    return;
+  }
+
+  const newParty = {
+    name,
+    code,
+    created: Date.now(),
+    users: {
+      [uname]: { history: [] }
+    },
+    gameState: {}
+  };
+
+  await partyRef.set(newParty);
+
+  S.curParty = code;
+  S.curUser = uname;
+  S.parties[code] = newParty;
+
+  // realtime sync
+  partyRef.on('value', (snapshot) => {
+    S.parties[code] = snapshot.val();
+    renderHome();
+  });
+
+  save();
+  updateNav();
+  renderHome();
+  subscribeToParty(code);
+  toast('🎉 Party created! Code: ' + code);
 }
-function joinParty(){
-  const code=document.getElementById('jcode').value.trim().toUpperCase();
-  const uname=document.getElementById('juname').value.trim();
-  if(!code){toast('⚠️ Enter a party code!');return;}
-  if(!uname){toast('⚠️ Enter your name!');return;}
-  const party=S.parties[code];
-  if(!party){toast('❌ Party not found. Check the code!');return;}
-  if(party.users[uname]&&uname!==S.curUser){toast('❌ That name is taken in this party!');return;}
-  if(!party.users[uname])party.users[uname]={history:[]};
-  S.curParty=code;S.curUser=uname;
-  save();updateNav();renderHome();
-  toast('🐟 Welcome '+uname+'!');
+
+async function joinParty() {
+  const code = document.getElementById('jcode').value.trim().toUpperCase();
+  const uname = document.getElementById('juname').value.trim();
+  if (!code) { toast('Enter a party code!'); return; }
+  if (!uname) { toast('Enter your name!'); return; }
+  const partyRef = ref(db, 'parties/' + code);
+  const snap = await get(partyRef);
+  if (!snap.exists()) {
+    toast('Party not found. Check the code!');
+    return;
+  }
+  const party = snap.val();
+  if (party.users && party.users[uname] && uname !== S.curUser) {
+    toast('That name is taken in this party!');
+    return;
+  }
+  // create user if not exists
+  await update(partyRef, {
+    ['users/' + uname]: party.users?.[uname] || { history: [] }
+  });
+  S.curParty = code;
+  S.curUser = uname;
+  // realtime sync
+  onValue(partyRef, (snapshot) => {
+  S.parties[code] = snapshot.val();
+  clearTimeout(renderTimeout);
+  renderTimeout = setTimeout(() => {
+    renderBoard();
+  }, 30);
+});
+  subscribeToParty(code);
+  toast('Welcome ' + uname + '!');
 }
+
+function subscribeToParty(code) {
+  const partyRef = db.ref('parties/' + code);
+
+  partyRef.on('value', (snapshot) => {
+    const data = snapshot.val();
+
+    if (!data) return;
+
+    S.parties[code] = data;
+
+    // 👇 re-render everything that depends on party
+    renderHome();
+    renderPicker();   // 👈 THIS is what keeps your UI synced
+  });
+}
+
 function leaveParty(){
   S.curParty=null;S.curUser=null;
   save();updateNav();renderHome();
   toast('👋 Left the party');
 }
+
 function saveAndReset(){
   if(!S.curParty)return;
   const party=S.parties[S.curParty];
@@ -109,6 +183,7 @@ function saveAndReset(){
   save();renderBoard();renderHome();
   toast('💾 Archived & reset!');
 }
+
 function dlArchive(i){
   const a=S.saved[i];
   const b=new Blob([JSON.stringify(a,null,2)],{type:'application/json'});
@@ -169,7 +244,7 @@ function renderPicker(){
   const party=S.curParty?S.parties[S.curParty]:null;
   document.getElementById('picknop').style.display=party?'none':'';
   document.getElementById('pickcont').style.display=party?'':'none';
-  if(!party)return;
+  if (!party || !party.users) return;
   const lf=latestFish();
   document.getElementById('pickstatus').innerHTML=
     `🌊 <b>${party.name}</b> &nbsp;·&nbsp; You are: ${lf?lf.emoji+' <b>'+lf.name+'</b>':'❓ not picked yet'}&nbsp;&nbsp;<span style="font-size:11px;color:var(--tx3)">Code: <b style="color:var(--a)">${S.curParty}</b></span>`;
@@ -179,6 +254,7 @@ function renderPicker(){
   S.pendFish=null;
   document.getElementById('confirmbtn').disabled=true;
 }
+
 function fishCardHTML(f,sel){
   const imgEl=f.image
     ?`<div class="fcard-img-wrap"><img class="fimg" src="${f.image}" onerror="this.parentElement.innerHTML='<span class=femoji>${f.emoji}</span>'"></div>`
@@ -189,26 +265,56 @@ function fishCardHTML(f,sel){
     <div class="fname">${f.name}</div>
   </div>`;
 }
+
 function selFish(id){
   S.pendFish=id;
   document.querySelectorAll('.fcard').forEach(c=>c.classList.toggle('sel',c.dataset.id===id));
   document.getElementById('confirmbtn').disabled=false;
 }
-function confirmPick(){
-  if(!S.pendFish||!S.curParty||!S.curUser)return;
-  const party=S.parties[S.curParty];
-  party.users[S.curUser].history.push({fishId:S.pendFish,ts:Date.now()});
-  save();updateNav();renderPicker();showPage('board');
-  const f=allFish().find(x=>x.id===S.pendFish);
-  toast(`${f.emoji} You are now a ${f.name}!`);
+
+async function confirmPick() {
+  if (!S.pendFish || !S.curParty || !S.curUser) return;
+  const code = S.curParty;
+  const uname = S.curUser;
+  // ✅ DEFINE FIRST
+  const newEntry = {
+    fishId: S.pendFish,
+    ts: Date.now()
+  };
+  // ✅ THEN USE IT
+  await db.ref(`parties/${code}/users/${uname}/history`).push(newEntry);
+  S.pendFish = null;
+  updateNav();
+  renderPicker();
+  showPage('board');
+  const f = allFish().find(x => x.id === newEntry.fishId);
+  console.log("Picked fish:", f);
+  toast(`${f.emoji} You are now a ${f.id}!`);
 }
 
-function latestFish(u,p){
-  const uname=u||S.curUser,pid=p||S.curParty;
-  if(!uname||!pid)return null;
-  const party=S.parties[pid];if(!party)return null;
-  const h=party.users[uname]?.history||[];if(!h.length)return null;
-  return allFish().find(f=>f.id===h[h.length-1].fishId)||null;
+function latestFish(u, p) {
+  const uname = u || S.curUser;
+  const pid = p || S.curParty;
+
+  if (!uname || !pid) return null;
+
+  const party = S.parties[pid];
+  if (!party) return null;
+
+  const histObj = party.users?.[uname]?.history;
+  if (!histObj) return null;
+
+  const hist = Object.values(histObj);
+
+  if (!hist.length) return null;
+
+  hist.sort((a, b) => a.ts - b.ts);
+
+  const last = hist[hist.length - 1]; // ✅ MUST be here
+
+  if (!last) return null;
+
+  return allFish().find(f => f.id === last.fishId) || null;
 }
 
 /* ─────────────────────────────────────────────
@@ -223,21 +329,28 @@ function switchBTab(t){
   document.getElementById('btab-personal').classList.toggle('on',t==='personal');
   renderBoard();
 }
-function renderBoard(){
-  const party=S.curParty?S.parties[S.curParty]:null;
-  document.getElementById('boardnop').style.display=party?'none':'';
-  document.getElementById('boardcont').style.display=party?'':'none';
-  if(!party)return;
-  document.getElementById('boardstatus').innerHTML=
-    `🌊 <b>${party.name}</b> &nbsp;·&nbsp; Code: <b style="color:var(--a)">${S.curParty}</b> &nbsp;·&nbsp; ${Object.keys(party.users).length} swimmer(s)`;
-  drawGroupGraph(party,'gcanvas');
-  drawGroupGraph(party,'hcanvas');
+
+function renderBoard() {
+  console.log("RENDER BOARD CALLED");
+  const party = S.curParty ? S.parties[S.curParty] : null;
+  document.getElementById('boardnop').style.display = party ? 'none' : '';
+  document.getElementById('boardcont').style.display = party ? '' : 'none';
+  if (!party || !party.users) return;
+  document.getElementById('boardstatus').innerHTML =
+    `🌊 <b>${party.name}</b> · Code: <b style="color:var(--a)">${S.curParty}</b> · ${Object.keys(party.users).length} swimmer(s)`;
+  drawGroupGraph(party, 'gcanvas');
+  console.log("GRAPH 1 DONE");
+  drawGroupGraph(party, 'hcanvas');
+  console.log("GRAPH 2 DONE");
   drawPersonalGraph(party);
-  const ul=document.getElementById('userslist');
-  ul.innerHTML=Object.keys(party.users).map(u=>{
-    const f=latestFish(u,S.curParty);
-    const me=u===S.curUser;
-    return`<div class="chip${me?' me':''}">${f?f.emoji:'❓'} ${u}${me?' ★':''}</div>`;
+  console.log("PERSONAL GRAPH DONE");
+  const ul = document.getElementById('userslist');
+  ul.innerHTML = Object.keys(party.users).map(u => {
+    const f = latestFish(u, party.code);
+    const me = u === S.curUser;
+    return `<div class="chip${me ? ' me' : ''}">
+      ${f ? f.emoji : '❓'} ${u}${me ? ' ★' : ''}
+    </div>`;
   }).join('');
 }
 function refreshBoard(){renderBoard();toast('🔄 Refreshed!');}
@@ -324,80 +437,154 @@ function drawDot(ctx,fish,x,y,label,col,num,imgCache){
   }
   ctx.restore();
 }
-function drawGroupGraph(party,canvasId){
-  const canvas=document.getElementById(canvasId);
-  const ctx=canvas.getContext('2d');
-  const W=canvas.width,H=canvas.height;
-  const{pad,cX,cY,gW,gH}=graphBase(ctx,W,H);
-  const legend=document.getElementById('glegend');
-  const items=[];
-  // Preload images then draw
-  const usersArr=Object.keys(party.users);
-  const fishImages={};
-  let toLoad=0,loaded=0;
-  const fishList=allFish();
-  usersArr.forEach(u=>{
-    const f=latestFish(u,S.curParty);
-    if(f&&f.image){toLoad++;}
+
+function drawGroupGraph(party, canvasId){ 
+  if (!party || !party.users) return;
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  const { pad, cX, cY, gW, gH } = graphBase(ctx, W, H);
+  const legend = document.getElementById('glegend');
+
+  const usersArr = Object.keys(party.users); // snapshot
+  const items = [];
+  const fishImages = {};
+
+  let toLoad = 0, loaded = 0;
+  const fl = allFish();
+
+  // count images to load
+  usersArr.forEach(u => {
+    const f = latestFish(u, party.code);
+    if (f && f.image) toLoad++;
   });
+
   function doDraw(){
-    let ci=0;
-    usersArr.forEach(u=>{
-      const f=latestFish(u,S.curParty);if(!f)return;
-      const x=s2c(f.luc,cX,gW/2),y=s2c(-f.eur,cY,gH/2);
-      const col=UCOLS[ci%UCOLS.length];ci++;
-      const me=u===S.curUser;
-      drawDot(ctx,f,x,y,u+(me?' ★':''),col,undefined,fishImages);
-      items.push(`<div class="legitem"><div class="legdot" style="background:${col}"></div>${f.emoji} ${u}</div>`);
+
+  // prevents overlapping renders
+  if (drawing) return;
+  drawing = true;
+
+  requestAnimationFrame(() => {
+
+    ctx.clearRect(0, 0, W, H);
+
+    let ci = 0;
+
+    usersArr.forEach(u => {
+      const f = latestFish(u, S.curParty);
+      if (!f) return;
+
+      const x = s2c(f.luc, cX, gW / 2);
+      const y = s2c(-f.eur, cY, gH / 2);
+
+      const col = UCOLS[ci++ % UCOLS.length];
+      const me = u === S.curUser;
+
+      drawDot(ctx, f, x, y, u + (me ? ' ★' : ''), col);
     });
-    legend.innerHTML=items.join('');
-    if(!usersArr.some(u=>latestFish(u,S.curParty))){
-      ctx.font='bold 15px Nunito';ctx.fillStyle='rgba(90,154,184,0.5)';
-      ctx.textAlign='center';ctx.fillText('No one has picked a fish yet!',W/2,H/2);
-    }
-  }
-  // Load images
-  usersArr.forEach(u=>{
-    const f=latestFish(u,S.curParty);
-    if(f&&f.image){
-      const img=new Image();
-      img.onload=()=>{fishImages[f.id]=img;loaded++;if(loaded===toLoad)doDraw()};
-      img.onerror=()=>{loaded++;if(loaded===toLoad)doDraw()};
-      img.src=f.image;
-    }
+
+    drawing = false;
   });
-  if(toLoad===0)doDraw();
 }
+
+  // load images
+  if (toLoad === 0) {
+    doDraw();
+  } else {
+    usersArr.forEach(u => {
+      const f = latestFish(u, party.code);
+      if (f && f.image) {
+        const img = new Image();
+
+        img.onload = () => {
+          fishImages[f.id] = img;
+          loaded++;
+          if (loaded === toLoad) doDraw();
+        };
+
+        img.onerror = () => {
+          loaded++;
+          if (loaded === toLoad) doDraw();
+        };
+
+        img.src = f.image;
+      }
+    });
+  }
+}
+
 function drawPersonalGraph(party){
-  const canvas=document.getElementById('pcanvas');
-  const ctx=canvas.getContext('2d');
-  const W=canvas.width,H=canvas.height;
-  const{pad,cX,cY,gW,gH}=graphBase(ctx,W,H);
-  if(!S.curUser||!party.users[S.curUser])return;
-  const hist=party.users[S.curUser].history||[];
-  const fl=allFish();
-  if(!hist.length){
-    ctx.font='bold 14px Nunito';ctx.fillStyle='rgba(90,154,184,0.5)';
-    ctx.textAlign='center';ctx.fillText('No picks yet — go catch some fish!',W/2,H/2);
+  if (!party || !party.users || !S.curUser) return;
+
+  const canvas = document.getElementById('pcanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  const { pad, cX, cY, gW, gH } = graphBase(ctx, W, H);
+
+  const user = party.users[S.curUser];
+  if (!user) return;
+
+  const histObj = user.history || {};
+  const hist = Object.values(histObj).sort((a, b) => a.ts - b.ts);
+  const fl = allFish();
+  console.log("HISTORY RAW:", party.users[S.curUser].history);
+
+  if (!hist.length) {
+    ctx.font = 'bold 14px Nunito';
+    ctx.fillStyle = 'rgba(90,154,184,0.5)';
+    ctx.textAlign = 'center';
+    ctx.fillText('No picks yet — go catch some fish!', W/2, H/2);
     return;
   }
-  const pts=hist.map(h=>{
-    const f=fl.find(x=>x.id===h.fishId);if(!f)return null;
-    return{x:s2c(f.luc,cX,gW/2),y:s2c(-f.eur,cY,gH/2),f};
+
+  const pts = hist.map(h => {
+    const f = fl.find(x => x.id === h.fishId);
+    if (!f) return null;
+
+    return {
+      x: s2c(f.luc, cX, gW / 2),
+      y: s2c(-f.eur, cY, gH / 2),
+      f
+    };
   }).filter(Boolean);
-  // Path
-  if(pts.length>1){
-    ctx.save();ctx.beginPath();ctx.moveTo(pts[0].x,pts[0].y);
-    pts.slice(1).forEach(p=>ctx.lineTo(p.x,p.y));
-    ctx.strokeStyle='rgba(0,212,255,0.25)';ctx.lineWidth=1.5;ctx.setLineDash([4,4]);ctx.stroke();
+
+  // path
+  if (pts.length > 1) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(pts[0].x, pts[0].y);
+
+    pts.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
+
+    ctx.strokeStyle = 'rgba(0,212,255,0.25)';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([4,4]);
+    ctx.stroke();
     ctx.restore();
   }
-  pts.forEach((pt,i)=>drawDot(ctx,pt.f,pt.x,pt.y,null,i===pts.length-1?'#00ff9d':'rgba(0,212,255,0.55)',i+1,{}));
+
+  // dots
+  pts.forEach((pt, i) => {
+    drawDot(
+      ctx,
+      pt.f,
+      pt.x,
+      pt.y,
+      null,
+      i === pts.length - 1 ? '#00ff9d' : 'rgba(0,212,255,0.55)',
+      i + 1,
+      {}
+    );
+  });
 }
 
 /* ─────────────────────────────────────────────
    ADD FISH
 ───────────────────────────────────────────── */
+/* 
 let curITab='upload',eraserOn=false,drawHist=[];
 
 function switchITab(t,btn){
@@ -482,10 +669,11 @@ function delFish(id){
   if(!confirm('Remove this fish from the scale?'))return;
   S.custom=S.custom.filter(f=>f.id!==id);save();renderLib();toast('🗑 Fish removed');
 }
-
+*/
 /* ─────────────────────────────────────────────
    DRAWING CANVAS
 ───────────────────────────────────────────── */
+/*
 function initDraw(){
   const c=document.getElementById('drawCanvas');
   const ctx=c.getContext('2d');
@@ -665,8 +853,6 @@ function injectAds(gridEl){
   renderSideAds();
 }
 
-
-
 let toastT;
 function toast(msg){
   const t=document.getElementById('toast');
@@ -705,9 +891,10 @@ function init(){
   load();
   const p=new URLSearchParams(location.search).get('party');
   if(p)document.getElementById('jcode').value=p.toUpperCase();
-  updateNav();renderHome();initDraw();renderLib();initBubbles();
+  updateNav();renderHome();/*initDraw();renderLib();*/initBubbles();
   renderSideAds();
   window.addEventListener('resize',()=>renderSideAds());
   setInterval(()=>{if(document.getElementById('page-board').classList.contains('on'))renderBoard();},30000);
 }
 init();
+
