@@ -1,3 +1,12 @@
+function esc(str){
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 /* ─────────────────────────────────────────────
    DEFAULT FISH
 ───────────────────────────────────────────── */
@@ -251,12 +260,12 @@ function renderHomeFromParty(party){
     document.getElementById('activeinfo').innerHTML=`
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
         <div>
-          <div style="font-size:19px;font-family:var(--fd);color:var(--a2)">${party.name}</div>
-          <div style="font-size:12px;color:var(--tx2);margin-top:3px">You: <b style="color:var(--tx)">${S.curUser}</b> &nbsp;·&nbsp; ${userCount} swimmer(s)</div>
+          <div style="font-size:19px;font-family:var(--fd);color:var(--a2)">${esc(party.name)}</div>
+          <div style="font-size:12px;color:var(--tx2);margin-top:3px">You: <b style="color:var(--tx)">${esc(S.curUser)}</b> &nbsp;·&nbsp; ${userCount} swimmer(s)</div>
         </div>
         <div style="text-align:center">
           <div style="font-size:10px;color:var(--tx3);letter-spacing:.5px">PARTY CODE</div>
-          <div class="party-code">${S.curParty}</div>
+          <div class="party-code">${esc(S.curParty)}</div>
         </div>
       </div>
       <hr class="divider">
@@ -265,13 +274,14 @@ function renderHomeFromParty(party){
         <button class="btn bd bsm" onclick="leaveParty()">🚪 Leave Party</button>
       </div>`;
 
+
     // Render users list for home canvas too
     drawGroupGraph(party, 'hcanvas');
     const ul = document.getElementById('userslist');
     if(ul) ul.innerHTML = Object.keys(party.users||{}).map(u=>{
       const f = latestFishFromParty(party, party.users[u].displayName||u);
       const me = (party.users[u].displayName||u) === S.curUser;
-      return`<div class="chip${me?' me':''}">${f?f.emoji:'❓'} ${party.users[u].displayName||u}${me?' ★':''}</div>`;
+      return`<div class="chip${me?' me':''}">${f ? f.emoji : '❓'} ${esc(party.users[u].displayName||u)}${me?' ★':''}</div>`;
     }).join('');
   } else {
     ap.style.display='none';
@@ -289,7 +299,7 @@ function renderHomeFromParty(party){
           const date = new Date(parseInt(ts)).toLocaleDateString();
           const cnt  = Object.keys(users).length;
           return`<div class="archive-item">
-            <div><div style="font-weight:700">Archived round</div>
+            <div style="font-weight:700">Archived round</div>
             <div style="font-size:11px;color:var(--tx3)">${date} · ${cnt} swimmer(s)</div></div>
           </div>`;
         }).join('');
@@ -328,7 +338,7 @@ function renderPickerFromParty(party){
 
   const lf = latestFishFromParty(party, S.curUser);
   document.getElementById('pickstatus').innerHTML =
-    `🌊 <b>${party.name}</b> &nbsp;·&nbsp; You are: ${lf ? lf.emoji+' <b>'+(lf.name||'?')+'</b>' : '❓ not picked yet'}&nbsp;&nbsp;<span style="font-size:11px;color:var(--tx3)">Code: <b style="color:var(--a)">${S.curParty}</b></span>`;
+    `🌊 <b>${party.name}</b> &nbsp;·&nbsp; You are: ${lf ? lf.emoji+' <b>'+(lf.name||'?')+'</b>' : '❓ not picked yet'}&nbsp;&nbsp;<span style="font-size:11px;color:var(--tx3)">Code: <b style="color:var(--a)">${esc(S.curParty)}</b></span>`;
 
   const grid = document.getElementById('fishgrid');
   grid.innerHTML = allFish().map(f=>fishCardHTML(f, lf && lf.id===f.id)).join('');
@@ -423,7 +433,7 @@ function renderBoardFromParty(party){
 
   const userCount = Object.keys(party.users||{}).length;
   document.getElementById('boardstatus').innerHTML =
-    `🌊 <b>${party.name}</b> &nbsp;·&nbsp; Code: <b style="color:var(--a)">${S.curParty}</b> &nbsp;·&nbsp; ${userCount} swimmer(s)`;
+    `🌊 <b>${party.name}</b> &nbsp;·&nbsp; Code: <b style="color:var(--a)">${esc(S.curParty)}</b> &nbsp;·&nbsp; ${userCount} swimmer(s)`;
 
   drawGroupGraph(party, 'gcanvas');
   drawGroupGraph(party, 'hcanvas');
