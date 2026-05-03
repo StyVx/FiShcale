@@ -7,6 +7,16 @@
 <link rel="icon" type="image/x-icon" href="img/icon.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="app.js"></script>
+<script>
+  firebase.initializeApp({
+    databaseURL: "https://fish-scale-1813f-default-rtdb.europe-west1.firebasedatabase.app/"
+  });
+  const db = firebase.database();
+</script>
+</script>
 </head>
 <body>
 
@@ -19,7 +29,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo"><button class="logo-btn" onclick="showPage('home')" id="tab-home">🐟 Fih <span>Scale</span></button></div>
+  <div class="logo"><button class="logo-btn" onclick="showPage('home')" id="tab-home">🐟 Fish <span>Scale</span></button></div>
   
   <div class="nav-tabs">
     <button class="ntab on" onclick="showPage('home')" id="tab-home">🏠 Home</button>
@@ -67,7 +77,7 @@
     <div class="ctitle">Scale Overview</div>
     <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px" id="userslist"></div>
   </div>
-    <img src="img/Fish scale v3.jpg" alt="Scale Overview">
+    <img src="img\Fish scale v6 unified-background.jpeg" alt="Scale Overview">
   </div>
   <div class="card" style="margin-top:14px">
         <div class="ctitle">Results</div>
@@ -82,7 +92,7 @@
     <div class="sbar" id="pickstatus"></div>
     <div class="card">
       <div class="ctitle">How are you feeling right now?</div>
-      <p style="font-size:12px;color:var(--tx2);margin-bottom:14px">Pick the fish that best describes your current state. Hover names for descriptions.</p>
+      <p style="font-size:12px;color:var(--tx2);margin-bottom:14px">Pick the fish that best describes your current state.</p>
       <div class="fgrid" id="fishgrid"></div>
     </div>
     <div style="margin-top:11px;text-align:right">
@@ -205,16 +215,5 @@
 </div>
 </main>
 <div class="toast" id="toast"></div>
-<script src="app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
-<script>
-  const firebaseConfig = {
-    databaseURL: "https://fish-scale-1813f-default-rtdb.europe-west1.firebasedatabase.app/"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
 </body>
 </html>
