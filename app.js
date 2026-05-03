@@ -11,28 +11,32 @@ function esc(str){
    DEFAULT FISH
 ───────────────────────────────────────────── */
 const DEFAULTS = [
-  {id:'F1',  name:'', image:'img/F1.jpg',  luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F2',  name:'', image:'img/F2.jpg',  luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F3',  name:'', image:'img/F3.jpg',  luc:-1, eur:5,  desc:'Everything is the funniest thing ever. Absolute chaos energy, no regrets.'},
-  {id:'F4',  name:'', image:'img/F4.jpg',  luc:-3, eur:3,  desc:'Bloated with confidence. Questionable decisions incoming. Watch out.'},
-  {id:'F5',  name:'', image:'img/F5.jpg',  luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F6',  name:'', image:'img/F6.jpg',  luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F7',  name:'', image:'img/F7.jpg',  luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F8',  name:'', image:'img/F8.jpg',  luc:4,  eur:1,  desc:'Sha-+rp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F9',  name:'', image:'img/F9.jpg',  luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F10', name:'', image:'img/F10.jpg', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F11', name:'', image:'img/F11.jpg', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F12', name:'', image:'img/F12.jpg', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
-  {id:'F13', name:'', image:'img/F13.jpg', luc:-5, eur:-3, desc:'Brain dead. Completely zoned out. The lights are off and nobody is home.'},
-  {id:'F14', name:'', image:'img/F14.jpg', luc:3,  eur:2,  desc:'Smooth sailing. Sharp, steady — the best version of yourself at a party.'},
-  {id:'F15', name:'', image:'img/F15.jpg', luc:5,  eur:4,  desc:'Bright, bubbly, and fully present. The suspiciously responsible one tonight.'},
-  {id:'F16', name:'', image:'img/F16.jpg', luc:-2, eur:-5, desc:'Lurking in the deep dark abyss. Do not approach. Do not make eye contact.'},
-  {id:'F17', name:'', image:'img/F17.jpg', luc:-4, eur:0,  desc:'Just drifting. No thoughts, head empty. What is a WiFi password?'},
-  {id:'F18', name:'', image:'img/F18.jpg', luc:4,  eur:1,  desc:'Sharp and focused. You could legitimately solve a maths problem right now.'},
-  {id:'F19', name:'', image:'img/F19.jpg', luc:2,  eur:-3, desc:'Overwhelmed and a little sad. The party is loud, you are tired, you miss your bed.'},
-  {id:'F20', name:'', image:'img/F20.jpg', luc:1,  eur:5,  desc:'Absolutely sky high. You have transcended earthly concerns. Legendary status.'},
-  {id:'F21', name:'', image:'img/F21.jpg', luc:4,  eur:-3, desc:'Stone cold sober and mildly bored. Counting the tiles on the ceiling.'},
-  {id:'F22', name:'', image:'img/F22.jpg', luc:2,  eur:3,  desc:'Buzzing with raw energy. Unpredictable, electrifying, touch you and get shocked.'},
+  {id:'F1',  name:'Soberly self-conscious', image:'img/F1.png',  luc:-5, eur:-3, desc:'salut ça va ?'},
+  {id:'F2',  name:'Midkey vibes', image:'img/F2.png',  luc:3,  eur:2,  desc:''},
+  {id:'F3',  name:'Feeling cheeky', image:'img/F3.png',  luc:-1, eur:5,  desc:''},
+  {id:'F4',  name:'Charisma +1', image:'img/F4.png',  luc:-3, eur:3,  desc:''},
+  {id:'F5',  name:'Definitely buzzin`', image:'img/F5.png',  luc:5,  eur:4,  desc:''},
+  {id:'F6',  name:'Smoked salmon', image:'img/F6.png',  luc:-2, eur:-5, desc:''},
+  {id:'F7',  name:'Deeply tipsy', image:'img/F7.png',  luc:-4, eur:0,  desc:''},
+  {id:'F8',  name:'Sorta Blasted', image:'img/F8.png',  luc:4,  eur:1,  desc:''},
+  {id:'F9',  name:'Feeling fly like a G6', image:'img/F9.png',  luc:2,  eur:-3, desc:''},
+  {id:'F10', name:'Sufficiently sauced', image:'img/F10.png', luc:1,  eur:5,  desc:''},
+  {id:'F11', name:'Absolutely torqued', image:'img/F11.png', luc:4,  eur:-3, desc:''},
+  {id:'F12', name:'Outright obliterated', image:'img/F12.png', luc:2,  eur:3,  desc:''},
+  {id:'F13', name:'Suffering symptoms', image:'img/F13.png', luc:-5, eur:-3, desc:''},
+  {id:'F14', name:'Brain dead', image:'img/F14.png', luc:3,  eur:2,  desc:''},
+  {id:'F15', name:'Zonked', image:'img/F15.png', luc:5,  eur:4,  desc:''},
+  {id:'F16', name:'Dragged through mud', image:'img/F16.png', luc:-2, eur:-5, desc:''},
+];
+
+const HonorableMentions = [
+  {id:'F17', name:'Smooth sailing', image:'img/F17.png', luc:-4, eur:0,  desc:''},
+  {id:'F18', name:'Meow meow meow meow meow :3', image:'img/F18.png', luc:4,  eur:1,  desc:''},
+  {id:'F19', name:'Slippery slope', image:'img/F19.png', luc:2,  eur:-3, desc:''},
+  {id:'F20', name:'Cunty realness', image:'img/F20.png', luc:1,  eur:5,  desc:''},
+  {id:'F21', name:'Wig snatched', image:'img/F21.png', luc:4,  eur:-3, desc:''},
+  {id:'F22', name:'Wahoo Wahooooooooo', image:'img/F22.png', luc:2,  eur:3,  desc:''},
+  {id:'F23', name:'Blub blub blub blub', image:'img/F23.png', luc:2,  eur:3,  desc:''},
 ];
 
 /* ─────────────────────────────────────────────
@@ -56,7 +60,7 @@ function loadLocal(){ try{ const r=localStorage.getItem('fihscale_custom'); if(r
 function saveSession(){ try{ sessionStorage.setItem('fihscale_session', JSON.stringify({curParty:S.curParty,curUser:S.curUser})); }catch(e){} }
 function loadSession(){ try{ const r=sessionStorage.getItem('fihscale_session'); if(r){ const d=JSON.parse(r); S.curParty=d.curParty; S.curUser=d.curUser; } }catch(e){} }
 
-function allFish(){ return [...DEFAULTS, ...(S.custom||[])]; }
+function allFish(){ return [...DEFAULTS, ...HonorableMentions, ...(S.custom||[])]; }
 
 /* ─────────────────────────────────────────────
    FIREBASE HELPERS
@@ -341,8 +345,13 @@ function renderPickerFromParty(party){
     `🌊 <b>${party.name}</b> &nbsp;·&nbsp; You are: ${lf ? lf.emoji+' <b>'+(lf.name||'?')+'</b>' : '❓ not picked yet'}&nbsp;&nbsp;<span style="font-size:11px;color:var(--tx3)">Code: <b style="color:var(--a)">${esc(S.curParty)}</b></span>`;
 
   const grid = document.getElementById('fishgrid');
-  grid.innerHTML = allFish().map(f=>fishCardHTML(f, lf && lf.id===f.id)).join('');
-  injectAds(grid);
+  const sectionLabel = (title) => `<div class="grid-section-label">${title}</div>`;
+  grid.innerHTML =
+    sectionLabel('The Fish Vibes Scale') +
+    DEFAULTS.map(f => fishCardHTML(f, lf && lf.id === f.id)).join('') +
+    sectionLabel('Honorable Mentions') +
+    HonorableMentions.map(f => fishCardHTML(f, lf && lf.id === f.id)).join('');
+    //injectAds(grid);
 
   // Re-highlight pending selection if user switched tabs and came back
   if(S.pendFish){
