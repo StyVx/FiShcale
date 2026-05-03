@@ -95,12 +95,12 @@ select option{background:#0a1628}
 /* FISH GRID */
 .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:14px}
 @media(max-width:600px){.fgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:340px){.fgrid{grid-template-columns:1fr}}
+@media(max-width:400px){.fgrid{grid-template-columns:1fr}}
 .fcard{background:var(--card2);border:2px solid var(--border);border-radius:var(--r);padding:0;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .fcard:hover{border-color:var(--brite);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.4)}
 .fcard.sel{border-color:var(--a2);background:rgba(0,255,157,0.07);box-shadow:0 0 20px rgba(0,255,157,0.18)}
-.fcard-img-wrap{flex:1;min-height:120px;overflow:hidden;position:relative}
-.femoji{font-size:54px;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:120px;line-height:1}
+.fcard-img-wrap{flex:1;min-height:150px;overflow:hidden;position:relative}
+/*.femoji{font-size:54px;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:120px;line-height:1}*/
 .fname{font-family:var(--fd);font-size:11px;color:var(--tx);padding:7px 6px;background:rgba(0,10,30,0.7);line-height:1.2}
 .fbars{display:none}
 .brow{display:flex;align-items:center;gap:4px}
@@ -113,7 +113,20 @@ select option{background:#0a1628}
 .bb{background:#4488ff;right:50%}
 .tip{position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);background:#071526;border:1px solid var(--brite);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--tx);width:150px;z-index:200;opacity:0;pointer-events:none;transition:opacity .15s;line-height:1.45;text-align:left}
 .fcard:hover .tip{opacity:1}
-.fimg{width:100%;height:100%;/*object-fit:cover*/;display:block;position:absolute;top:0;left:0}
+.fimg{width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0}
+.grid-section-label {
+  width: 100%;      
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 8px 4px;
+  color: rgb(37, 107, 136);
+  border-bottom: 1px solid #ccc;
+  margin: 12px 0 6px;
+  letter-spacing: 0.05em;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Times New Roman, serif;
+}
 
 /* SCOREBOARD */
 .btabs{display:flex;gap:7px;margin-bottom:15px}
