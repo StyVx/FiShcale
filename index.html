@@ -29,7 +29,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo"><button class="logo-btn" onclick="showPage('home')" id="tab-home">🐟 Fish <span>Scale</span></button></div>
+  <div class="logo"><button class="logo-btn" onclick="showPage('home')" id="tab-home"> Fish <span>Scale</span></button></div>
   
   <div class="nav-tabs">
     <button class="ntab on" onclick="showPage('home')" id="tab-home">🏠 Home</button>
@@ -55,8 +55,8 @@
     <div class="card">
       <div class="ctitle">🎉 Create Party</div>
       <div class="field"><label>Party Name</label><input type="text" id="cname" placeholder="Friday Night Swim..."></div>
-      <div class="field"><label>Password (optional — leave blank for auto-code)</label><input type="text" id="cpwd" placeholder="myparty2024"></div>
-      <div class="field"><label>Your Name</label><input type="text" id="cuname" placeholder="Captain Ahab..."></div>
+      <div class="field"><label>Password (optional — leave blank for auto-code)</label><input type="text" id="cpwd" placeholder="myparty2026"></div>
+      <div class="field"><label>Your Name</label><input type="text" id="cuname" placeholder="Captain Haddock"></div>
       <button class="btn bp bfw" onclick="createParty()">🚀 Launch Party</button>
     </div>
     <div class="card">
@@ -147,8 +147,8 @@
     <div class="ctitle" style="font-size:15px;margin-top:4px">📊 Where on the Scale?</div>
     <div class="ax2">
       <div class="field">
-        <label>Lucidity ↔ Cloudiness</label>
-        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = ☁️ Totally Cloudy → +5 = 💡 Hyper Lucidity</div>
+        <label>CHAOTIC ↔ ORDERLY</label>
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = ORDERLY → +5 = CHAOTIC</div>
         <div class="rangef">
           <span style="font-size:12px">☁️</span>
           <input type="range" id="afluc" min="-5" max="5" step="1" value="0" oninput="document.getElementById('afluv').textContent=this.value;updatePreview()">
@@ -157,8 +157,8 @@
         </div>
       </div>
       <div class="field">
-        <label>Euphoria ↔ Feeling Blue</label>
-        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = 😢 Deep Blue → +5 = 🎉 Pure Euphoria</div>
+        <label>GOOD ↔ BAD</label>
+        <div style="font-size:10px;color:var(--tx3);margin-bottom:4px">-5 = 😢 BAD → +5 = GOOD</div>
         <div class="rangef">
           <span style="font-size:12px">😢</span>
           <input type="range" id="afeur" min="-5" max="5" step="1" value="0" oninput="document.getElementById('afeuv').textContent=this.value;updatePreview()">
