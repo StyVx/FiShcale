@@ -51,20 +51,11 @@
     <h1>The Fish Vibe Scale</h1>
     <p class="sub">Track your party state through the sacred language of fish</p>
   </div>
-  <div class="hgrid">
-    <div class="card">
-      <div class="ctitle">🎉 Create Party</div>
-      <div class="field"><label>Party Name</label><input type="text" id="cname" placeholder="Friday Night Swim..."></div>
-      <div class="field"><label>Password (optional — leave blank for auto-code)</label><input type="text" id="cpwd" placeholder="myparty2026"></div>
-      <div class="field"><label>Your Name</label><input type="text" id="cuname" placeholder="Captain Haddock"></div>
-      <button class="btn bp bfw" onclick="createParty()">🚀 Launch Party</button>
-    </div>
     <div class="card">
       <div class="ctitle">🔑 Join Party</div>
       <div class="field"><label>Party Code / Password</label><input type="text" id="jcode" placeholder="Enter code..." oninput="this.value=this.value.toUpperCase()"></div>
       <div class="field"><label>Your Name</label><input type="text" id="juname" placeholder="Your name..."></div>
       <button class="btn bs bfw" onclick="joinParty()">🐟 Dive In</button>
-    </div>
   </div>
   <div id="activepanel" style="display:none;margin-top:18px">
     <div class="card"><div class="ctitle">Your Party</div><div id="activeinfo"></div></div>
@@ -80,9 +71,16 @@
     <img src="img\Fish scale v6 unified-background.jpeg" alt="Scale Overview">
   </div>
   <div class="card" style="margin-top:14px">
-        <div class="ctitle">Results</div>
-        <div class="gcont"><canvas id="hcanvas" width="600" height="500"></canvas></div>
-      </div>
+    <div class="ctitle">Results</div>
+    <div class="gcont"><canvas id="hcanvas" width="600" height="500"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">🎉 Create Party</div>
+    <div class="field"><label>Party Name</label><input type="text" id="cname" placeholder="Friday Night Swim..."></div>
+    <div class="field"><label>Password (optional — leave blank for auto-code)</label><input type="text" id="cpwd" placeholder="myparty2026"></div>
+    <div class="field"><label>Your Name</label><input type="text" id="cuname" placeholder="Captain Haddock"></div>
+    <button class="btn bp bfw" onclick="createParty()">🚀 Launch Party</button>
+  </div>
 </div>
 
 <!-- ── PICKER ── -->
