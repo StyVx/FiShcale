@@ -11,32 +11,32 @@ function esc(str){
    DEFAULT FISH
 ───────────────────────────────────────────── */
 const DEFAULTS = [
-  {id:'F1',  name:'Soberly self-conscious', image:'img/F1.png',  luc:-5, eur:-3, desc:'salut ça va ?'},
-  {id:'F2',  name:'Midkey vibes', image:'img/F2.png',  luc:3,  eur:2,  desc:''},
-  {id:'F3',  name:'Feeling cheeky', image:'img/F3.png',  luc:-1, eur:5,  desc:''},
-  {id:'F4',  name:'Charisma +1', image:'img/F4.png',  luc:-3, eur:3,  desc:''},
-  {id:'F5',  name:'Definitely buzzin`', image:'img/F5.png',  luc:5,  eur:4,  desc:''},
-  {id:'F6',  name:'Smoked salmon', image:'img/F6.png',  luc:-2, eur:-5, desc:''},
-  {id:'F7',  name:'Deeply tipsy', image:'img/F7.png',  luc:-4, eur:0,  desc:''},
-  {id:'F8',  name:'Sorta Blasted', image:'img/F8.png',  luc:4,  eur:1,  desc:''},
-  {id:'F9',  name:'Feeling fly like a G6', image:'img/F9.png',  luc:2,  eur:-3, desc:''},
-  {id:'F10', name:'Sufficiently sauced', image:'img/F10.png', luc:1,  eur:5,  desc:''},
-  {id:'F11', name:'Absolutely torqued', image:'img/F11.png', luc:4,  eur:-3, desc:''},
-  {id:'F12', name:'Outright obliterated', image:'img/F12.png', luc:2,  eur:3,  desc:''},
-  {id:'F13', name:'Suffering symptoms', image:'img/F13.png', luc:-5, eur:-3, desc:''},
-  {id:'F14', name:'Brain dead', image:'img/F14.png', luc:3,  eur:2,  desc:''},
-  {id:'F15', name:'Zonked', image:'img/F15.png', luc:5,  eur:4,  desc:''},
-  {id:'F16', name:'Dragged through mud', image:'img/F16.png', luc:-2, eur:-5, desc:''},
+  {id:'F1',  name:'Soberly self-conscious', image:'img/F1.png',  luc:-1, eur:-5, desc:''},
+  {id:'F2',  name:'Midkey vibes', image:'img/F2.png',  luc:1,  eur:-5,  desc:''},
+  {id:'F3',  name:'Feeling cheeky', image:'img/F3.png',  luc:3, eur:-2.5,  desc:''},
+  {id:'F4',  name:'Charisma +1', image:'img/F4.png',  luc:3, eur:0,  desc:''},
+  {id:'F5',  name:'Definitely buzzin`', image:'img/F5.png',  luc:4,  eur:0,  desc:''},
+  {id:'F6',  name:'Smoked salmon', image:'img/F6.png',  luc:0, eur:0, desc:''},
+  {id:'F7',  name:'Deeply tipsy', image:'img/F7.png',  luc:2, eur:2.5,  desc:''},
+  {id:'F8',  name:'Sorta Blasted', image:'img/F8.png',  luc:0,  eur:3.5,  desc:''},
+  {id:'F9',  name:'Feeling fly like a G6', image:'img/F9.png',  luc:4.5,  eur:2.5, desc:''},
+  {id:'F10', name:'Sufficiently sauced', image:'img/F10.png', luc:5,  eur:3,  desc:''},
+  {id:'F11', name:'Absolutely torqued', image:'img/F11.png', luc:1.5,  eur:4, desc:''},
+  {id:'F12', name:'Outright obliterated', image:'img/F12.png', luc:0,  eur:5,  desc:''},
+  {id:'F13', name:'Suffering symptoms', image:'img/F13.png', luc:-2.5, eur:5, desc:''},
+  {id:'F14', name:'Brain dead', image:'img/F14.png', luc:-5,  eur:5,  desc:''},
+  {id:'F15', name:'Zonked', image:'img/F15.png', luc:-3,  eur:1,  desc:''},
+  {id:'F16', name:'Dragged through mud', image:'img/F16.png', luc:-4, eur:-5, desc:''},
 ];
 
 const HonorableMentions = [
-  {id:'F17', name:'Smooth sailing', image:'img/F17.png', luc:-4, eur:0,  desc:''},
-  {id:'F18', name:'Meow meow meow meow meow :3', image:'img/F18.png', luc:4,  eur:1,  desc:''},
-  {id:'F19', name:'Slippery slope', image:'img/F19.png', luc:2,  eur:-3, desc:''},
-  {id:'F20', name:'Cunty realness', image:'img/F20.png', luc:1,  eur:5,  desc:''},
-  {id:'F21', name:'Wig snatched', image:'img/F21.png', luc:4,  eur:-3, desc:''},
-  {id:'F22', name:'Wahoo Wahooooooooo', image:'img/F22.png', luc:2,  eur:3,  desc:''},
-  {id:'F23', name:'Blub blub blub blub', image:'img/F23.png', luc:2,  eur:3,  desc:''},
+  {id:'F17', name:'Smooth sailing', image:'img/F17.png', luc:5, eur:-5,  desc:''},
+  {id:'F18', name:'Meow meow meow meow meow :3', image:'img/F18.png', luc:3,  eur:3,  desc:''},
+  {id:'F19', name:'Slippery slope', image:'img/F19.png', luc:-1,  eur:4, desc:''},
+  {id:'F20', name:'Cunty realness', image:'img/F20.png', luc:5,  eur:1.5,  desc:''},
+  {id:'F21', name:'Wig snatched', image:'img/F21.png', luc:1,  eur:2, desc:''},
+  {id:'F22', name:'Wahoo Wahooooooooo', image:'img/F22.png', luc:5,  eur:5,  desc:''},
+  {id:'F23', name:'Blub blub blub blub', image:'img/F23.png', luc:0,  eur:2,  desc:''},
 ];
 
 /* ─────────────────────────────────────────────
@@ -490,15 +490,15 @@ function graphBase(ctx,W,H){
   ctx.beginPath(); ctx.moveTo(cX,pad); ctx.lineTo(cX,pad+gH); ctx.stroke();
   ctx.restore();
   ctx.font='bold 10px Nunito,sans-serif'; ctx.fillStyle='rgba(90,154,184,0.7)'; ctx.textAlign='center';
-  ctx.fillText('CLOUDY',pad+gW*0.18,cY-7);
-  ctx.fillText('LUCID', pad+gW*0.82,cY-7);
-  ctx.save(); ctx.translate(pad-5,cY-gH*0.28); ctx.rotate(-Math.PI/2); ctx.fillText('EUPHORIC',0,0); ctx.restore();
-  ctx.save(); ctx.translate(pad-5,cY+gH*0.28); ctx.rotate(-Math.PI/2); ctx.fillText('FEELING BLUE',0,0); ctx.restore();
+  ctx.fillText('BAD',pad+gW*0.18,cY-7);
+  ctx.fillText('GOOD', pad+gW*0.82,cY-7);
+  ctx.save(); ctx.translate(pad-5,cY-gH*0.28); ctx.rotate(-Math.PI/2); ctx.fillText('CHAOTIC',0,0); ctx.restore();
+  ctx.save(); ctx.translate(pad-5,cY+gH*0.28); ctx.rotate(-Math.PI/2); ctx.fillText('ORDERLY',0,0); ctx.restore();
   ctx.font='9px Nunito,sans-serif'; ctx.fillStyle='rgba(255,255,255,0.16)';
-  ctx.fillText('HAPPY CHAOS',   pad+gW*0.25,pad+14);
-  ctx.fillText('THE SWEET SPOT',pad+gW*0.75,pad+14);
-  ctx.fillText('THE ABYSS',     pad+gW*0.25,pad+gH-6);
-  ctx.fillText('SOBER SADNESS', pad+gW*0.75,pad+gH-6);
+  //ctx.fillText('HAPPY CHAOS',   pad+gW*0.25,pad+14);
+  //ctx.fillText('THE SWEET SPOT',pad+gW*0.75,pad+14);
+  //ctx.fillText('THE ABYSS',     pad+gW*0.25,pad+gH-6);
+  //ctx.fillText('CRAZY ENTHOUSIASM', pad+gW*0.75,pad+gH-6);
   return{pad,cX,cY,gW,gH};
 }
 
@@ -557,24 +557,49 @@ function drawGroupGraph(party, canvasId){
     if(f&&f.image) toLoad++;
   });
 
-  function doDraw(){
-    let ci=0;
-    usersArr.forEach(ukey=>{
-      const udata=party.users[ukey];
-      const uname=udata.displayName||ukey;
-      const f=latestFishFromParty(party,uname); if(!f) return;
-      const x=s2c(f.luc,cX,gW/2), y=s2c(-f.eur,cY,gH/2);
-      const col=UCOLS[ci%UCOLS.length]; ci++;
-      const me=uname===S.curUser;
-      drawDot(ctx,f,x,y,uname+(me?' ★':''),col,undefined,fishImages);
-      items.push(`<div class="legitem"><div class="legdot" style="background:${col}"></div>${f.emoji||'🐟'} ${uname}</div>`);
+function doDraw(){
+  // 1. Collect all points first
+  const points = [];
+  let ci = 0;
+  usersArr.forEach(ukey => {
+    const udata = party.users[ukey];
+    const uname = udata.displayName || ukey;
+    const f = latestFishFromParty(party, uname); if (!f) return;
+    const x = s2c(f.luc, cX, gW / 2), y = s2c(-f.eur, cY, gH / 2);
+    const col = UCOLS[ci % UCOLS.length]; ci++;
+    points.push({ f, x, y, uname, col });
+  });
+
+  // 2. Offset duplicates that share the same (x, y)
+  const SPREAD_R = 18; // pixels between overlapping dots
+  const posMap = {};
+  points.forEach(p => {
+    const key = `${Math.round(p.x)}_${Math.round(p.y)}`;
+    if (!posMap[key]) posMap[key] = [];
+    posMap[key].push(p);
+  });
+  Object.values(posMap).forEach(group => {
+    if (group.length === 1) return;
+    group.forEach((p, i) => {
+      const angle = (2 * Math.PI * i) / group.length;
+      p.x += Math.cos(angle) * SPREAD_R;
+      p.y += Math.sin(angle) * SPREAD_R;
     });
-    if(legendEl) legendEl.innerHTML=items.join('');
-    if(!usersArr.some(ukey=>latestFishFromParty(party,party.users[ukey].displayName||ukey))){
-      ctx.font='bold 15px Nunito'; ctx.fillStyle='rgba(90,154,184,0.5)';
-      ctx.textAlign='center'; ctx.fillText('No one has picked a fish yet!',W/2,H/2);
-    }
+  });
+
+  // 3. Draw with adjusted positions
+  points.forEach(({ f, x, y, uname, col }) => {
+    const me = uname === S.curUser;
+    drawDot(ctx, f, x, y, uname + (me ? ' ★' : ''), col, undefined, fishImages);
+    items.push(`<div class="legitem"><div class="legdot" style="background:${col}"></div>${f.emoji || '🐟'} ${uname}</div>`);
+  });
+
+  if (legendEl) legendEl.innerHTML = items.join('');
+  if (!points.length) {
+    ctx.font = 'bold 15px Nunito'; ctx.fillStyle = 'rgba(90,154,184,0.5)';
+    ctx.textAlign = 'center'; ctx.fillText('No one has picked a fish yet!', W / 2, H / 2);
   }
+}
 
   usersArr.forEach(ukey=>{
     const udata=party.users[ukey];
@@ -655,7 +680,7 @@ function getImgData(){
 }
 function updatePreview(){
   const name  = document.getElementById('afname').value||'Your Fish';
-  const emoji = '🐟';
+  const emoji = '';
   const desc  = document.getElementById('afdesc').value||'Add a description...';
   document.getElementById('fprevname').textContent=name;
   //document.getElementById('fprevemoji').textContent=emoji;
