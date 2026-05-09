@@ -658,7 +658,7 @@ function updatePreview(){
   const emoji = '🐟';
   const desc  = document.getElementById('afdesc').value||'Add a description...';
   document.getElementById('fprevname').textContent=name;
-  document.getElementById('fprevemoji').textContent=emoji;
+  //document.getElementById('fprevemoji').textContent=emoji;
   document.getElementById('fprevdesc').textContent=desc;
   const img=getImgData();
   const box=document.getElementById('fprev');
